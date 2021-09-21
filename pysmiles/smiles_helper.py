@@ -24,7 +24,7 @@ import operator
 
 import networkx as nx
 
-LOGGER = logging.getLogger(__name__)
+# LOGGER = logging.getLogger(__name__)
 
 ISOTOPE_PATTERN = r'(?P<isotope>[\d]+)?'
 ELEMENT_PATTERN = r'(?P<element>b|c|n|o|s|p|\*|[A-Z][a-z]{0,2})'
@@ -101,7 +101,8 @@ def parse_atom(atom):
         raise ValueError("A hydrogen atom can't have hydrogens")
 
     if 'stereo' in out:
-        LOGGER.warning('Atom "%s" contains stereochemical information that will be discarded.', atom)
+        #LOGGER.warning('Atom "%s" contains stereochemical information that will be discarded.', atom)
+        pass
 
     return out
 
